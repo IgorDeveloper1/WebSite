@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.max-width{
+    max-width: 1300px;  /* max-wdith com 1300px*/
+    padding: 0 80px; /* padding de 0 porcento com 80 pixeis*/
+    margin: auto; /* margem automatica/*  /*=*/ /* deixa meio separado dos cantos*/
+}
+
+/*estilo barra de navegação*/
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 15px;
+    z-index: 999;
+    /*background: rgb(49, 131, 255);*/
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: rgb(30, 107, 177);
+}
+.navbar .max-width{
+    display: flex; /*display flexivel*/
+    align-items: center;    /* alinhe os itens ao centro - escrita no caso*/
+    justify-content: space-between; /* espaçamento ao meio */
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span{
+    color: rgb(30, 30, 161); 
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: #000;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li  a{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease; /* faz uma transição de cor quando coloca o mouse em cima*/
+}
+.navbar .menu li a:hover{
+    color: rgb(30, 30, 161);
+}
+
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+
+/*estilizandoo o menu btn*/
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/*estilizando a home section*/
+.home{
+    display: flex;
+    background: url("images/background.jpg") no-repeat center;
+    height: 100vh;
+    color: #fff;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 500px;
+    font-family: 'Ubuntu', 'sans-serif';
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 60px;
+    font-weight: 600;
+    color:#fff;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span{
+    color: rgb(30, 30, 161);
+}
+.home .home-content a{
+    display: inline-block;
+    background: rgb(30, 30, 161);
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 20px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border:2px solid rgb(30, 30, 161);
+    transition: all 0.s3s ease;
+}
+.home .home-content a:hover{
+    color: rgb(30, 30, 161); 
+    background: none;
+}
+/*estilizando todos os conteudos dos codigos similares*/
+section{
+    padding: 100px 0;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "" ;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: rgb(30, 30, 161);
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+/*estiliziando a sessao sobre*/ 
+.about, .products, .contact, footer{
+    font-family: 'Poppins', sans-serif;
+}
+.about .title::after{
+    content: "Quem nós somos";
+}
+.about .about-content, .products, .prod-content
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    color:  rgb(30, 30, 161);
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+/*
+.about .about-content .right a{
+    display: inline-block;
+    background: rgb(30, 30, 161);
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border:2px solid rgb(30, 30, 161);
+    transition: all 0.3s ease;
+}
+.about .about-content .right a:hover{
+    color: rgb(30, 30, 161);
+    background: none;
+}
+*/
+
+.about .about-content .column{  
+    width: 50%;
+}
+.about .about-content .left{  
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+}
+.about .about-content .right{
+    flex: 100%;
+}
+.products .prod-content .card{
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+/*estilizando a sessao produtos*/
+.products{
+    color: #fff;
+    background: #111;
+}
+.products .title::before{
+    background: #fff;
+}
+.products .title::after{
+    background: #111;
+    content: "O que vendemos?";
+}
+.products .prod-content .card{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.products .prod-content .card:hover{
+    background: rgb(30, 30, 161);
+}
+.products .prod-content .card .box{
+    transition: all 0.3s ease;
+}
+.products .prod-content .card:hover .box{
+    transform: scale(1.05);
+}
+.products .prod-content .card i{
+    font-size: 40px;
+    color:  rgb(30, 30, 161);
+    transition: color 0.3 ease;
+}
+.products .prod-content .card:hover i{
+    color:  #fff;  
+}
+.products .prod-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+/*Estilizando a sessão de contato*/
+.contact .title::after{
+    content: "Entre em contato";
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content  .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 22px;
+    color: rgb(30, 30, 161);
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .info .sub-title{
+    color: #333;
+}
+/*Estilizando rodapé*/
+footer{
+    background: #111;
+    padding: 20px 23px;
+    color: white;
+    font-size: 15px;
+}
+footer a{
+    color: rgb(30, 30, 161);
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+/*media query start responsivo*/
+@media(max-width: 1300px){
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
+@media(max-width: 1104px){
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+@media(max-width: 991px){
+    .max-width{
+        padding: 0 50px; /* padding de 0 porcento com 50 pixeis*/
+    }
+}
+@media(max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100% ;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0%;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30;
+    }
+    .products .prod-content .card{
+        width: 100%;
+    }
+}
+
+@media(max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+}
+
+
+@media(max-width: 500px ){                                                                                  
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+}
