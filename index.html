@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="sortcut icon" href="" type="image/png"/>
+</head>
+<body>
+    <header>
+        <a href="#home" class="logo">Web site</a>
+        <div class="toggle"; onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu()";>Inicio</a></li>
+            <li><a href="#sobre" onclick="toggleMenu()";>Sobre nós</a></li>
+            <li><a href="#produtos" onclick="toggleMenu()";>Produtos</a></li>
+            <li><a href="#contato" onclick="toggleMenu()";>Contato</a></li>
+        </ul>
+    </header>
+    <section class="banner" id="home">
+        <div class="textBx">
+            <h2>Olá, nós somos <br><span>Uma empresa</span></h2>
+            <h3>Com as melhores qualidades!</h3>
+            <a href="#sobre" class="btn">Sobre nós</a>
+        </div>
+    </section>
+    <section class="perguntas" id="sobre">
+        <div class="cabecalho">
+            <h2>Sobre nós</h2>
+        </div>
+        <div class="content">
+            <div class="conteudoBx w50">
+                <h3>Nós somos</h3>
+                <p>Lorem ipsum dolor, 
+                sit amet consectetur adipisicing elit.
+                Quo reiciendis odit error provident atque voluptatibus totam facere
+                quod fuga laudantium.<br><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Et minima, 
+                voluptatum magni ex id ipsam animi accusamus veniam neque ipsum.</p>
+            </div>
+            <div class=" w50">
+                <img src="https://image.flaticon.com/icons/png/512/15/15659.png" alt="" class="imagem">
+            </div>
+        </div>
+    </section>
+    <section class="produtos" id="produtos">
+        <div class="cabecalho white">
+            <h2>Produtos</h2>
+            <p>Veja quais são nossos produtos.</p>
+        </div>
+        <div class="content">
+            <div class="produtosBx">
+                <img src="icon1.png"></img>
+                <h2>Produto 01</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        </div>
+        <div class="content">
+            <div class="produtosBx">
+                <img src="icon1.png"></img>
+                <h2>Produto 02</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        </div>
+        </div>
+    </section>
+
+    <section class="contato" id="contato">
+        <div class="cabecalho">
+            <h2>Contato</h2> <!--Trocar-->
+            <p>Entre em contato conosco</p> <!--Trocar-->
+        </div>
+        <div class="content">
+            <div class="info">
+                <h3>Informações de Contato</h3>
+                <div class="infoBx">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                            <div class="text">
+                                <h3>Endereço</h3>
+                                <p>Seu endereço<br>Sua cidade<br>Seu cep</p>
+                            </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                            <div class="text">
+                                <h3>Telefone</h3>
+                                <p>Seu telefone</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-envelope-o"></i>
+                        </div>
+                            <div class="text">
+                                <h3>Email</h3>
+                                <p>Seu email</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="copyright">
+        <p>Copyright © Igor 2021 - Todos os direitos reservados.</p>
+    </div>
+    <script type="text/javascript">
+        window.addEventListener('scroll', function(){
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var menuToggle = document.querySelector('.menu');
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');  
+        }
+    </script>
+</body>
+</html>

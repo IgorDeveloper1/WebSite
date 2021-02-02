@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    scroll-behavior: smooth;
+}
+section{
+    padding: 100px;
+}
+.banner{
+    position: relative;
+    min-height: 100vh;
+    background: #111;
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner h2{
+    font-size: 3em;
+    color: #fff;     /* Trocar*/
+    font-weight: 500;
+    line-height: 1.5em;
+}
+.banner h2 span{
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.banner h3{
+    font-size: 1.5em;
+    color: #fff;     /* Trocar*/
+    font-weight: 500;
+}
+.btn{
+    position: relative;
+    background: #2196f3; /* Trocar*/
+    display: inline-block;
+    color: #fff;  /* Trocar*/
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-family: Poppins Regular 400, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0px;
+    font-weight: 500;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+header.sticky{
+    background: #111; /*Trocar*/
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+header .logo{
+    color: #fff; /*Trocar*/
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: Hind Siliguri, sans-serif;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+header.sticky .logo{
+    color: #fff; /*Trocar*/
+}
+header ul{
+    position: relative;
+    display: flex;
+}
+header ul li{
+    position: relative;
+    list-style: none;
+}
+header ul li a{
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    color: #fff; /*Trocar*/
+    text-decoration: none;
+}
+.cabecalho{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #111;
+}
+.cabecalho h2{
+    font-weight: 600;
+    font-size: 30px;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+.conteudoBx{
+    padding-right: 30px ;
+}
+.conteudoBx h3{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.w50{
+    min-width: 50%;
+}
+img{
+    max-width: 100%;
+}
+.produtos{
+    background-color: #111;  
+}
+.cabecalho.white{
+    color: white;
+}
+.cabecalho.white p{
+    font-size: 25px;
+}
+.produtos .content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.produtos .content .produtosBx{
+    padding: 40px 20px;
+    background: #222;
+    color: #fff;
+    max-width: 340px;
+    margin: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+.produtos .content .produtosBx:hover{
+    background: darkcyan;
+}
+.produtos .content .produtosBx img{
+    max-width: 80px;
+    filter: invert(1);
+}
+.produtos .content .produtosBx h2{
+    font-size: 20px;
+    font-weight: 600;
+}
+.contato{
+    background: #fff;
+}
+.info h3{
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.info{
+    min-width: 40%;
+}
+.infoBx{
+    position: relative;
+}
+.infoBx .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.infoBx .box .icon{
+    min-width: 40px;
+    padding-top: 4px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+.infoBx .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #000;
+    flex-direction: column;
+    font-weight: 300;
+}
+.infoBx .box .text h3{
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 0;
+}
+.copyright{
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+}
+/*.produtosBx a{
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #111;
+    color: #fff;
+    border-radius: 30px;
+    border: none;
+    height: 60px;
+    line-height: 30px;
+    padding: 0 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+.produtosBx  a:hover{
+    transform: scale(1.05);
+}*/
+
+/*Responsivo*/
+@media (max-width: 991px)
+{
+    header,
+    header.sticky
+    {
+        padding: 20px 50px;
+        z-index: 1000;
+    }
+    .menu
+    {
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        display: block;
+        padding: 100px 50px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        transition: 0.5s;
+        z-index: 999;
+        border-top: 1px solid rgba(0,0,0,0.2);
+    }
+    .menu.active
+    {
+        left: 0;
+    }
+    header ul li a
+    {
+        color: #111;
+        font-size: 24px;
+        margin: 10px;
+    }
+    .toggle
+    {
+        width: 40px;
+        height: 40px;
+        background: url(menu.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+    }
+    .toggle.active
+    {
+        background: url(close.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        cursor: pointer;
+    }
+    header.sticky .toggle
+    {
+        filter: invert(1);
+    }
+    section
+    {
+        padding: 100px 50px;
+    }
+    .banner
+    {
+        padding: 150px 50px 100px;
+    }
+    .banner h2
+    {
+        font-size: 1.5em;
+        color: darkcyan;
+    }
+    .banner h3
+    {
+        font-size: 1em;
+        color: darkcyan;
+    }
+    .btn
+    {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    .cabecalho h2
+    {
+        font-weight: 600;
+        font-size: 24px;
+    }
+    .conteudoBx h3
+    {
+        font-size: 20px;
+    }
+    .content
+    {
+        flex-direction: column;
+    }
+    .w50
+    {
+        margin-bottom: 20px;
+    }
+    .produtos .content .produtosBx
+    {
+        margin: 10px;
+    }
+    .info
+    {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 600px)
+{
+    header,
+    header.sticky
+    {
+        padding: 20px 20px;
+    }
+    .banner
+    {
+        padding: 150px 20px 100px;
+    }
+    section
+    {
+        padding: 100px 20px;    
+    }
+}
